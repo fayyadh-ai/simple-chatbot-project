@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Simple Ruled-based chatbot(Python OOP)
 A modular chatbot built using OOP principles and JSON keywords matching
 
