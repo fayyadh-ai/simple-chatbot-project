@@ -1,0 +1,38 @@
+{
+  "greetings":[
+    "hello",
+    "hi",
+    "hey",
+    "good morning"
+  ],
+  "farewell":[
+    "goodbye",
+    "bye",
+    "see you"
+  ],
+  "compliments":[
+    "good",
+    "nice",
+    "great"
+  ],
+  "gratitude":[
+    "thanks",
+    "thank you",
+    "thanks a lot",
+    "appreciate it"
+  ],
+  "small_talk":[
+    "how are you",
+    "whats up"
+  ],
+  "show_help":[
+    "help",
+    "what do you do",
+    "what can you help with"
+  ],
+  "bot_identity":[
+    "who are you",
+    "what can you do",
+    "what are you"
+  ]
+}

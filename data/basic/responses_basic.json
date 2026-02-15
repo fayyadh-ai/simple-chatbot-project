@@ -1,0 +1,35 @@
+{
+  "greetings":[
+    "Hi there, how can I help you today?",
+    "Hello!What can I do for you?",
+    "Hey!, How can I assist you?"
+  ],
+  "farewell":[
+    "Goodbye, See you later!",
+    "Have a great day!",
+    "Take care!"
+  ],
+  "compliments":[
+    "Thank you! I apreciate it",
+    "Thanks!, I'm still improving",
+    "That's kind of you to say"
+  ],
+  "gratitude":[
+    "Happy to help",
+    "You're welcome",
+    "Anytime!"
+  ],
+  "small_talk":[
+    "I'm doing well,How about you?",
+    "Iam funcioning properly, How are you today?"
+  ],
+  "show_help":[
+    "I can chat with you and provide simple responses",
+    "I can answer basic questions and chat with you",
+    "I can help with small talk"
+  ],
+  "bot_identity":[
+    "I'm simple ruled-based chatbot",
+    "I'm simple ruled-based chatbot build in Python"
+  ]
+}
