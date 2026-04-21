@@ -1,0 +1,118 @@
+{
+  "modifier":{
+    "top_5":{
+      "first":[
+        "Here are the top 5 {genre} movies \n that many viewers consider some of the best in the genre.",
+        "If you're looking for the best of the best,\n these are the top 5 {genre} movies worth watching.",
+        "These are five of the most popular and well known {genre} movies \n you might want to check out.",
+        "Here are the top five {genre} films \n that often appear on recommendation lists.",
+        "If you want a quick list, \n here are the top 5 {genre} movies people frequently recommend."
+      ],
+      "last":[
+        "If you'd like to see a longer list, \n I can also show you the top 10.",
+        "Let me know \n if you'd like recommendations from another genre.",
+        "There are many more movies worth watching, \n so feel free to ask for more.",
+        "If you're curious about newer movies or highly rated ones, \n just tell me.",
+        "Movie lists never really end, \n so I can always recommend more if you want."
+      ]
+    },
+    "top_10":{
+      "first":[
+        "Here are the top 10 {genre} movies \n that are frequently recommended by movie fans.",
+        "If you're looking for a larger list, \n here are ten of the most popular {genre} movies.",
+        "These are ten well known {genre} films \n that many viewers consider worth watching.",
+        "Here are the top ten {genre} movies \n that often receive strong praise from audiences.",
+        "If you're exploring the genre more deeply, \n these top 10 {genre} movies are a great place to start."
+      ],
+      "last":[
+        "Let me know \n if you'd like recommendations from another genre.",
+        "If you want something different, \n I can also suggest movies based on rating or release year.",
+        "Feel free to ask for another list \n if you're still looking for something to watch.",
+        "There are plenty of other films out there, \n so don't hesitate to ask for more suggestions.",
+        "If you're interested, \n I can also recommend some newer releases."
+      ]
+    },
+    "year":{
+      "first":[
+        "If you're interested in more recent releases,\n here are some newer {genre} movies.",
+        "Here are several relatively recent {genre} movies \n that many viewers have enjoyed.",
+        "These {genre} movies \n come from more modern releases and might be worth checking out.",
+        "If you're looking for something newer, \n these {genre} films are among the more recent titles.",
+        "Here are some {genre} movies \n from recent years that have gained attention from audiences."
+      ],
+      "last":[
+        "If you'd like,\n I can also recommend highly rated movies.",
+        "Let me know if you'd prefer classic films instead.",
+        "There are plenty of other recent movies too,\n so feel free to ask for more.",
+        "If you're curious about top rated films,\n I can also show you those.",
+        "Just ask \n if you'd like another list from a different genre."
+      ]
+    },
+    "rating":{
+      "first":[
+        "If you prefer highly rated movies, \n here are some of the best rated {genre} films.",
+        "These {genre} movies \n are known for having strong ratings and positive audience feedback.",
+        "Here are several well rated {genre} movies \n that many viewers consider worth watching.",
+        "If you're looking for quality films, \n these {genre} movies have some of the highest ratings.",
+        "These {genre} movies \n stand out because of their strong ratings and positive reviews."
+      ],
+      "last":[
+        "Of course ratings are subjective, \n so you might still discover hidden gems elsewhere.",
+        "Let me know \n if you'd like recommendations based on release year instead.",
+        "If you want another genre, \n I can recommend more movies.",
+        "There are many more great films out there, \n so feel free to ask again.",
+        "If you're still exploring movies, \n I can always suggest more."
+      ]
+    }
+  },
+  "default":{
+    "first":[
+      "Here are some {genre} movies you might enjoy watching.\n This list includes several well known titles \n that many viewers have liked over the years.",
+      "If you're looking for something to watch, \n these {genre} movies could be a good place to start.",
+      "Here are several {genre} movie recommendations \n  that are quite popular among movie fans.",
+      "If you're exploring the {genre} genre,\n the following movies are often suggested by many viewers.",
+      "Here are some interesting {genre} films \n that might be worth adding to your watchlist."
+    ],
+    "last":[
+      "Let me know if you want recommendations \n from another genre.",
+      "I can also suggest top rated movies or newer releases \n if you're interested.",
+      "Feel free to ask for more movie recommendations anytime.",
+      "There are plenty of other films out there,\n so just ask if you want another list.",
+      "If you'd like something more specific,\n like top rated or recent movies, I can help with that too."
+    ]
+  },
+  "intent":{
+    "recommend_all":{
+      "first":[
+        "If you're looking for something to watch,\n here are several movie recommendations from different genres that many viewers enjoy.",
+        "Not sure what to watch next? \n Here are some popular movie suggestions across different genres.",
+        "Here are a few movie recommendations\n that many film fans consider worth watching.",
+        "If you're exploring movies and want some ideas,\n here are several films from different genres you might like.",
+        "Here are some movie recommendations \n that are often mentioned when people talk about great films to watch."
+      ],
+      "last":[
+        "If you want something more specific,\n you can ask for a particular genre like action, comedy, or horror.",
+        "You can also ask for top rated movies,\n newer releases, or recommendations from a specific genre.",
+        "Let me know \n if you'd like recommendations from a particular genre.",
+        "If you want a longer list or a specific genre,\n just tell me and I can suggest more.",
+        "Feel free to ask for more movies \n if you're still looking for something to watch."
+      ]
+    },
+    "recommend_by_genre":{
+      "first": [
+        "If you're in the mood for some {genre} movies,\n here are a few recommendations \n that are often appreciated by many viewers.",
+        "Looking for something in the {genre} category?\n These movies are commonly suggested and worth checking out.",
+        "Here are some {genre} movies \n that might match what you're looking for right now.",
+        "If {genre} movies are your thing,\n the following list includes some popular and well-regarded choices.",
+        "Based on your interest in {genre},\n here are several movies that are frequently recommended."
+      ],
+      "last": [
+        "If you want more {genre} movies or a longer list,\n just let me know.",
+        "There are still many other {genre} movies out there,\n so feel free to ask for more recommendations.",
+        "If you're interested in exploring deeper into {genre},\n I can suggest more options anytime.",
+        "Let me know if you'd like more {genre} movies \n or recommendations from other genres.",
+        "You can always ask for more {genre} movies \n or try a different category if you want something new."
+      ]
+    }
+  }
+}
