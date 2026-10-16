@@ -1053,6 +1053,14 @@
       "title": "The Little Mermaid",
       "year": 1989,
       "rating": 7.6
-    }
+    },
+    {"title": "Mr. robot",
+     "year" : 2015,
+     "rating": 9.5
+    },
+    {"title" :"G30SPKI",
+     "year"  :1984,
+     "rating":4.5
+    },
   ]
 }
