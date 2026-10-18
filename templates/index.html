@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0d12">
+  <title>Simple Chatbot</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #0b0d12;
+      color: #e8eaf0;
+      font-family: Inter, system-ui, sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 850px;
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    header {
+      padding: 8px 0 18px;
+      border-bottom: 1px solid #252936;
+    }
+
+    header h1 {
+      font-size: 20px;
+      margin: 0 0 6px;
+    }
+
+    header p {
+      margin: 0;
+      color: #9299aa;
+      font-size: 13px;
+    }
+
+    #chat {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .message {
+      max-width: 85%;
+      padding: 13px 16px;
+      border-radius: 16px;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+    }
+
+    .bot {
+      align-self: flex-start;
+      background: #191d28;
+      border: 1px solid #292e3c;
+    }
+
+    .user {
+      align-self: flex-end;
+      background: #635bdb;
+      color: white;
+    }
+
+    form {
+      display: flex;
+      gap: 10px;
+      padding: 12px;
+      background: #151822;
+      border: 1px solid #303545;
+      border-radius: 18px;
+    }
+
+    input {
+      flex: 1;
+      min-width: 0;
+      padding: 10px;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 15px;
+    }
+
+    button {
+      padding: 11px 17px;
+      border: none;
+      border-radius: 12px;
+      background: #766cf4;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:disabled { opacity: .5; cursor: wait; }
+
+    footer {
+      padding-top: 12px;
+      color: #777e8e;
+      text-align: center;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Simple Chatbot</h1>
+      <p>Python-powered conversational assistant</p>
+    </header>
+
+    <section id="chat" aria-live="polite">
+      <div class="message bot">Halo! 👋 Ada yang bisa aku bantu?</div>
+    </section>
+
+    <form id="form">
+      <input id="message" placeholder="Ketik pesan..." autocomplete="off" required>
+      <button id="send" type="submit">Kirim</button>
+    </form>
+
+    <footer>Simple Chatbot · Built with Python & Flask</footer>
+  </main>
+
+  <script>
+    const form = document.getElementById("form");
+    const input = document.getElementById("message");
+    const chat = document.getElementById("chat");
+    const send = document.getElementById("send");
+
+    function addMessage(text, role) {
+      const bubble = document.createElement("div");
+      bubble.className = "message " + role;
+      bubble.textContent = text;
+      chat.appendChild(bubble);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const message = input.value.trim();
+      if (!message || send.disabled) return;
+
+      addMessage(message, "user");
+      input.value = "";
+      send.disabled = true;
+
+      try {
+        const response = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.response || "Permintaan gagal.");
+        }
+
+        addMessage(data.response, "bot");
+      } catch (error) {
+        addMessage("Gagal menghubungi chatbot: " + error.message, "bot");
+      } finally {
+        send.disabled = false;
+        input.focus();
+      }
+    });
+  </script>
+</body>
+</html>
