@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="description" content="Simple Chatbot powered by Python">
+  <title>Simple Chatbot</title>
+
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}"
+  >
+
+  <script
+    src="{{ url_for('static', filename='script.js') }}"
+    defer
+  ></script>
+</head>
+
+<body>
+  <main class="app">
+    <header>
+      <h1>Simple Chatbot</h1>
+      <p>Python-powered conversational assistant</p>
+    </header>
+
+    <section id="chat" aria-live="polite" aria-label="Chat messages">
+      <div class="message bot">
+        Halo! 👋 Ada yang bisa aku bantu?
+      </div>
+    </section>
+
+    <form id="form">
+      <input
+        id="message"
+        name="message"
+        type="text"
+        placeholder="Ketik pesan..."
+        autocomplete="off"
+        aria-label="Pesan kamu"
+        required
+      >
+
+      <button id="send" type="submit">
+        Kirim
+      </button>
+    </form>
+
+    <footer>
+      Simple Chatbot · Built with Python &amp; Flask
+    </footer>
+  </main>
+</body>
+</html>
